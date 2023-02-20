@@ -1,1 +1,1 @@
-# ComputationalMusicology
+Corpus Computational Musicology
