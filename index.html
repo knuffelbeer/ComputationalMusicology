@@ -356,6 +356,84 @@ display: none;
 <h1>Computational Musicology</h1>
 <div id="gemaakt-door-beer-meester" class="section level2">
 <h2>Gemaakt door Beer Meester</h2>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.4.1     ✔ purrr   1.0.1
+## ✔ tibble  3.1.8     ✔ dplyr   1.1.0
+## ✔ tidyr   1.3.0     ✔ stringr 1.5.0
+## ✔ readr   2.1.4     ✔ forcats 1.0.0
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre><code>## Corpus Computational Musicoligy by beer                  
+## 31 tracks                                                
+## 0 followers                                              
+## https://open.spotify.com/playlist/3JcL4Ss6awLCbdwj3FcUv6 
+## 
+## - description  : chr &quot;&quot;
+## - tracks       :List of 7
+## - type         : chr &quot;playlist&quot;
+## - href         : chr &quot;https://api.spotify.com/v1/playlists/3JcL4Ss6awLCbdwj3FcUv6&quot;
+## - images       :&#39;data.frame&#39;:    3 obs. of  3 variables:
+## - public       : logi TRUE
+## - collaborative: logi FALSE</code></pre>
+<pre><code>## $&lt;NA&gt;
+## NULL</code></pre>
+<pre class="r"><code>colnames(tracks)</code></pre>
+<pre><code>##  [1] &quot;added_at&quot;                           &quot;is_local&quot;                          
+##  [3] &quot;primary_color&quot;                      &quot;added_by.href&quot;                     
+##  [5] &quot;added_by.id&quot;                        &quot;added_by.type&quot;                     
+##  [7] &quot;added_by.uri&quot;                       &quot;added_by.external_urls.spotify&quot;    
+##  [9] &quot;track.artists&quot;                      &quot;track.available_markets&quot;           
+## [11] &quot;track.disc_number&quot;                  &quot;track.duration_ms&quot;                 
+## [13] &quot;track.episode&quot;                      &quot;track.explicit&quot;                    
+## [15] &quot;track.href&quot;                         &quot;track.id&quot;                          
+## [17] &quot;track.is_local&quot;                     &quot;track.name&quot;                        
+## [19] &quot;track.popularity&quot;                   &quot;track.preview_url&quot;                 
+## [21] &quot;track.track&quot;                        &quot;track.track_number&quot;                
+## [23] &quot;track.type&quot;                         &quot;track.uri&quot;                         
+## [25] &quot;track.album.album_type&quot;             &quot;track.album.artists&quot;               
+## [27] &quot;track.album.available_markets&quot;      &quot;track.album.href&quot;                  
+## [29] &quot;track.album.id&quot;                     &quot;track.album.images&quot;                
+## [31] &quot;track.album.name&quot;                   &quot;track.album.release_date&quot;          
+## [33] &quot;track.album.release_date_precision&quot; &quot;track.album.total_tracks&quot;          
+## [35] &quot;track.album.type&quot;                   &quot;track.album.uri&quot;                   
+## [37] &quot;track.album.external_urls.spotify&quot;  &quot;track.external_ids.isrc&quot;           
+## [39] &quot;track.external_urls.spotify&quot;        &quot;video_thumbnail.url&quot;</code></pre>
+<pre class="r"><code>track_id_colname = &quot;added_by.id&quot;
+playlist_uris &lt;- as.character(tracks$added_by.uri)
+playlist_uris</code></pre>
+<pre><code>##  [1] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [2] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [3] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [4] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [5] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [6] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [7] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [8] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+##  [9] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [10] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [11] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [12] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [13] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [14] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [15] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [16] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [17] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [18] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [19] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [20] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [21] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [22] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [23] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [24] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [25] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [26] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [27] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [28] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [29] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [30] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;
+## [31] &quot;spotify:user:bj8r8j5y7xc4r5mrq9wocn290&quot;</code></pre>
+<pre class="r"><code>username &lt;- &quot;beer&quot;</code></pre>
 </div>
 </div>
 

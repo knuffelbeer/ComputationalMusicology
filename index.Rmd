@@ -1,2 +1,49 @@
 # Computational Musicology
-## Gemaakt door Beer Meester
+## Gemaakt door Beer Meester 
+
+```{r, echo=FALSE}
+
+library(spotifyr)
+
+playlist_id <- '3JcL4Ss6awLCbdwj3FcUv6'
+
+playlist <- get_playlist(
+  playlist_id,
+  fields = NULL,
+  market = NULL,
+  authorization = get_spotify_access_token()
+)
+library(tidyverse)
+library(knitr)
+
+playlist
+
+
+username <- 'beer'
+uri <- 'https://open.spotify.com/playlist/3JcL4Ss6awLCbdwj3FcUv6?si=5d031d76ff7b4a34' 
+
+tracks <- get_playlist_tracks(
+  playlist_id,
+  fields = NULL,
+  limit = 100,
+  offset = 0,
+  market = NULL,
+  authorization = get_spotify_access_token(),
+  include_meta_info = FALSE
+)
+trekkies <- playlist$tracks
+trekkies
+```
+```{r}
+colnames(tracks)
+
+track_id_colname = "added_by.id"
+playlist_uris <- as.character(tracks$added_by.uri)
+playlist_uris
+
+username <- "beer"
+
+
+
+
+```
