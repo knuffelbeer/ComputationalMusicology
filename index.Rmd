@@ -34,7 +34,7 @@ tracks <- get_playlist_tracks(
 trekkies <- playlist$tracks
 trekkies
 ```
-```{r}
+```{r, echo=FALSE}
 colnames(tracks)
 
 track_id_colname = "added_by.id"
